@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NZIC</title>
+  <title><%= yield(:title) != "" ? "#{yield(:title)} - " : "" %>NZIC</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p>NZIC Logo</p>
+<h1>New Zealand Informatics Competition</h1>
+
+<ul class="menu">
+  <li><%= link_to "home", root_path %></li>
+  <% %w[rules register faq about].each do |page| %>
+    <li><%= link_to page, info_path(page) %></li>   
+  <% end %>
+</ul>
 
 <%= yield %>
 

@@ -1,5 +1,7 @@
-Showing info
+<% content_for :title, @info.name %>
+<h1><%= @info.name %></h1>
 
-<%= @info.text %>
+
+<%= markdown_parse @info.text %>
 
 
