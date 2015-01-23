@@ -11,9 +11,9 @@
 
 NGINX_INSTALL_DIR="/usr/local/nginx"
 
-RAILS_ROOT="/var/www/nzic/current"
-SERVER_NAME="nzic"
-APP_NAME="nzic"
+export RAILS_ROOT="/var/www/nzic/current"
+export SERVER_NAME="nzic.nzoi.org.nz"
+export APP_NAME="nzic"
 
 # nginx includes this app configuration
 bash $RAILS_ROOT/script/template.bash < $RAILS_ROOT/script/nginx.app.conf | cat > $NGINX_INSTALL_DIR/conf/sites-available/$SERVER_NAME.conf

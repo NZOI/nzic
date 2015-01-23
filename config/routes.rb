@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'info#home'
 
   get 'info/:name', to: "info#show", as: :info
+  get 'info', to: "info#home", as: "info_home"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
