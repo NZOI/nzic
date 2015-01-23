@@ -1,7 +1,7 @@
 PATH
   remote: ../nzic_models
   specs:
-    nzic_models (0.0.1)
+    nzic_models (0.0.2)
       loofah
       rails (~> 4.0)
       redcarpet
