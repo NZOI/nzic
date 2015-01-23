@@ -1,0 +1,7 @@
+app: nzic
+root: ../../..
+timeout: 10
+log: log
+template: ../../upstart
+procfile: Procfile
+

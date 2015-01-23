@@ -1,0 +1,4 @@
+root: ../../..
+timeout: 10
+procfile: Procfile
+
