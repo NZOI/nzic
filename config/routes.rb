@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'info#home'
 
-  get 'info/:name', to: "info#show", as: :info
+  #get 'info/:name', to: "info#show", as: :info
+
+  scope :nzic do
+    get '', to: 'info#home'
+    get 'info/:name', to: "info#show", as: :info
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
