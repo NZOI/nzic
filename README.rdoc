@@ -1,28 +1,31 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To test through ssh:
 
-Things you may want to cover:
+```sh
+ssh -L 5010:localhost:5010 -p 2222 user@train.nzoi.org.nz
+```
 
-* Ruby version
+Then go to /var/www/nzic/dev/. And change your user into nzic:
 
-* System dependencies
+```sh
+sudo su -p nzic # the -p keeps your profile so everything else is easier too
+```
 
-* Configuration
+Then run a development server:
 
-* Database creation
+```sh
+bundle exec rails server -p 5010
+```
 
-* Database initialization
+If you choose a different port, make sure they all match.
 
-* How to run the test suite
+Point your browser to localhost:5010 to see the website.
 
-* Services (job queues, cache servers, search engines, etc.)
+=== Changing Stuff
 
-* Deployment instructions
+After changing stuff, git add, git commit, git push as usual. Just remember to set your email in git (check using `git config user.email`, or set it using `git config user.email=`).
 
-* ...
+Since I normally use dev/, you should make another folder if you make many changes. Either `git clone https://github/NZOI/nzic /var/www/nzic/mydev/`, or a `cp` often works well enough.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
