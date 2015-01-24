@@ -11,7 +11,7 @@
 <p>organised and run by <a href="http://nzoi.org.nz">NZOI</a></p>
 
 <ul class="menu">
-  <% NZIC::MenuItem.find_each do |item| %>
+  <% NZIC::MenuItem.order(:id).each do |item| %>
     <li><%= link_to item.name, item.link %></li>   
   <% end %>
 </ul>
